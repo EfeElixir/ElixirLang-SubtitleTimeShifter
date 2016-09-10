@@ -1,6 +1,8 @@
 defmodule SubtitleTimeShifter do
     use Timex
 
+    @shift_in_seconds -7
+
     @doc """
         ## Sample block:
         1
@@ -53,7 +55,7 @@ defmodule SubtitleTimeShifter do
 
         case Timex.parse(part1, "%H:%M:%S", :strftime) do
              {:ok, part1_date} ->
-                 newpart1_date_time = Timex.shift(part1_date, seconds: -7)
+                 newpart1_date_time = Timex.shift(part1_date, seconds: @shift_in_seconds)
                  [_, newpart1_time | _] = String.split("#{newpart1_date_time}", ~r/ /, trim: true)
 
                  "#{newpart1_time},#{part2}"
