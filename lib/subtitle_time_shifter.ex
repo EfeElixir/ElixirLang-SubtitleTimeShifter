@@ -15,8 +15,8 @@ defmodule SubtitleTimeShifter do
         output_file_name = "SorcererAndTheWhiteSnake_Output.info.srt"
 
         case File.read input_file_name do
-            {:ok, input_ile_contents} ->
-                blocks = String.split(input_ile_contents, ~r/\r\n\r\n/, trim: true)
+            {:ok, input_file_contents} ->
+                blocks = String.split(input_file_contents, ~r/\r\n\r\n/, trim: true)
 
                 {:ok, final_subtitle_file} = File.open(output_file_name, [:write, :utf8, :append])
                 shift_each_block(blocks, final_subtitle_file)
