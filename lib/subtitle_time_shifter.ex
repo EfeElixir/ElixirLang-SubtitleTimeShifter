@@ -10,7 +10,7 @@ defmodule SubtitleTimeShifter do
         Master, where did this blizzard come from?
 
     """
-    def do_time_shift do
+    def shift_time do
         input_file_name = "SorcererAndTheWhiteSnake_Input.info.srt"
         output_file_name = "SorcererAndTheWhiteSnake_Output.info.srt"
 
