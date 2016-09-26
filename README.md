@@ -17,3 +17,5 @@ mix compile
 iex -S mix
 SubtitleTimeShifter.shift_time
 ```
+
+For the [Haskell version](https://github.com/LispyAriaro/HaskellLang_SubtitleTimeShifter)
